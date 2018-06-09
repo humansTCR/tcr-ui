@@ -129,9 +129,10 @@ function* contractsSaga(action) {
     document.title = registryNameResult['0']
 
     const tokenDecimals = tokenDecimalsResult['0'].toString(10)
+    console.log(minDeposit['0'].toString(10), tokenDecimals)
     const parameters = {
       // convert minDeposit based on the decimals of the token
-      minDeposit: baseToConvertedUnit(minDeposit['0'].toString(10), tokenDecimals),
+      minDeposit: minDeposit['0'].toString(10),
       applyStageLen: applyStageLen['0'].toString(10),
       commitStageLen: commitStageLen['0'].toString(10),
       revealStageLen: revealStageLen['0'].toString(10),
