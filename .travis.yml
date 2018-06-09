@@ -18,4 +18,4 @@ deploy:
   bucket: humans-tcr
   local_dir: build
   on:
-    branch: release
+    branch: master
