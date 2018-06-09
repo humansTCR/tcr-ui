@@ -32,5 +32,5 @@ export async function ipfsAddObject(obj) {
   return CID
 }
 
-export const ipfsABIsHash = 'QmRUo4m9dT1M1DQhCtXhrsct4Tta7wRaFooKG3dVTbiUUv'
+export const ipfsABIsHash = 'Qmat8hWQZNTYZvB578aGtUSn5ZjyXJE7D7L3vaAjRELvvp'
 export const ipfsTokensHash = 'QmRH8e8ssnj1CWVepGvAdwaADKNkEpgDU5bffTbeS6JuG9'
