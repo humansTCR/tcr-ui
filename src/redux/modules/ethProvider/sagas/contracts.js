@@ -8,7 +8,6 @@ import * as homeTypes from 'redux/modules/home/types'
 
 import { getEthjs } from 'redux/libs/provider'
 import { ipfsGetData, ipfsABIsHash } from 'redux/libs/ipfs'
-import { baseToConvertedUnit } from 'redux/libs/units'
 import { setupRegistry, setupContract } from '../utils'
 
 export default function* contractsSagasRoot() {

@@ -203,7 +203,7 @@ class Transactions extends Component {
     this.props.onSendTransaction({ methodName: 'approve', args })
   }
   handleTransfer = () => {
-    const { parameters, tcr } = this.props
+    const { tcr } = this.props
     const numTokens = convertedToBaseUnit(this.state.numTokens, tcr.get('tokenDecimals'))
 
     const args = [this.state.transferTo, numTokens]
