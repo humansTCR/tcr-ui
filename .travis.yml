@@ -1,8 +1,21 @@
 language: node_js
 node_js:
-  - 8
+  - 9
+
 cache:
   directories:
     - node_modules
+
 script:
-  - npm test
+  - yarn build
+
+deploy:
+  provider: s3
+  access_key_id:
+    secure: "KdiybCOUhHySc5Axc1oycAaJuJt3t2Ed4N2MtellHfSnhii0nVrooVEMdP+qhtih/tZ5GnuEMWrbbYd5YOO8vhT4py/3771B2PUux3OkYpfnL0fbIpKmVrdnmHusnzXg32n1ZOXTTmo0FUFP9caMyhTliIjtJfwdhM/LYAM4jsOaAwriNpIEwM1VkEItEPcej7fQ8Xw79WMardEG+zOB2lpauob/Ism6kPQnPh3zf1LdbjNLur+uV3jYBO+KSv1G2rveJXx5i4Tl1uI8owvgGjtHZ7D2HziMc6WoQS8oZSeeoxdgGKQtIw5/50QwFDrIeDnkDQgE+ZFtmMypCqWp5kcJZKO9uPjcwXNY8/yCdOjl59HdSkfExhrULXdxSb0tyBmEK1F0cVE6NLiRYS6S61+CNZHsqxplbIhd5h9iIJVHhQntLu4SCrCVkfa/Gg/pueDDXSZkIOxHN4juAc7He+HoFyDY1P/3SrElmZSJmzBlFiGjPVhlGP3KeTJO0J8mET+2qqtSlqh9M7LW9QLVdj039eUzlhJf07XbU9iU3Zdq7t+lxBye3CWnR0d9kQLpAzoOhwr8R8ONjZkUaxP/GNRqT+r2HSW3lQA2ZL+7XBgodFrFnOSqooNal6cXfy8uZG8eLSqZCs0279p5y7Ov1URrvjxaMXGdeF8WEvO+wPw="
+  secret_access_key:
+    secure: "c2gX539DJwx6RXdrhrM8q9J1rEe9HAGN5m35+XlULpxHFWtsnr4xVwVX4T6hQMz8tYAuEitSGPkQ2rDxqqanMjR3fJHpPrlYFTEtnmAyTTFhPXhfalZQdlSicYlqrFYafjhw9NDpMPQPdX7wnWMoo3/Ee4Un1ZusEi7zhwLUvLEHqy90/nSP2xOU+6rcUnes/ZapFnZxEGSmIrq3EYAQQ3DRZCWcLODBWbQgrsdwXlYMxvoSJfqz3b+gf8rooNmqZJIXelRSumU6ExdaurEExMWjGUzV+yCF1/PrYfcNIH7SizsP47wTaHVwWWOffV7YcL4gWC3rgfjKTLLJYBgZiMt92ghdkoe3I6U6SYmk/0jsyqdVuB5Rw8Cy/m5D5rhfF/LpMvJMW40AwzG1PqMn2SvOHBe18kxvsCMtPTLQ6fTEOSSkI3cuMI1X6hrccuveA8DgDA6+gtka6y64SHcC3+AlfJ1fYjfAFBOgLsNlsGfsvpR8Xx/1NLy2JC8IRywMeZ0+SPrLkgy6Ldy/chwAhKlRPzvhsHg5XxFov0dH6algJRHjCxqbv8MWtvIww/PnisTmsLosrXDYGG5NOdpCO1nfz0BSwlImf87T2rrUnOkuFejpfhFg643zs2FbiyB1d7NElpkV5DgMMPYBVHR7M+lD4rx+FCaCTsS+Hk580XQ="
+  bucket: humans-tcr
+  local_dir: build
+  on:
+    branch: release
