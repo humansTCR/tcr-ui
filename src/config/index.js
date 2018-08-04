@@ -44,5 +44,14 @@ export const registries = {
       tokenName: 'ethair',
       multihash: 'Qma3uaQ4RRSR1dR4vNj7CzFAHG5aY42tgBoW9HPWv89msT',
     },
+    {
+      name: 'humans',
+      registryAddress: '0x25a9f208948f35df21c501c30a25d48f3d9f50a1',
+      votingAddress: '0xb8d49d6c5caff25761fc435194f88f920cbf531c',
+      tokenAddress: '0x63cc57647fdc10a64bcba3680c27716c02c0707c',
+      tokenSymbol: 'HMN',
+      tokenName: 'Human',
+      multihash: 'Qma3uaQ4RRSR1dR4vNj7CzFAHG5aY42tgBoW9HPWv89msT',
+    },
   ],
 }
