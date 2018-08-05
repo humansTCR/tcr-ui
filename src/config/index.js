@@ -14,17 +14,6 @@ export function getIpfsABIsHash(network) {
 }
 
 export const registries = {
-  mainnet: [
-    {
-      name: 'The adChain Registry',
-      registryAddress: '0x5e2eb68a31229b469e34999c467b017222677183',
-      votingAddress: '0xb4b26709ffed2cd165b9b49eea1ac38d133d7975',
-      tokenAddress: '0xd0d6d6c5fe4a677d343cc433536bb717bae167dd',
-      tokenSymbol: 'ADT',
-      tokenName: 'adToken',
-      multihash: 'QmRnEq62FYcEbjsCpQjx8MwGfBfo35tE6UobxHtyhExLNu',
-    },
-  ],
   rinkeby: [
     {
       name: 'Humans',
