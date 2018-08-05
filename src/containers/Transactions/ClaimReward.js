@@ -7,10 +7,10 @@ import SidePanel from './components/SidePanel'
 import { TransactionsContext } from './index'
 
 class ClaimReward extends Component {
-  constructor(props) {
-    super(props)
-    // this.getCommitHash = this.getCommitHash.bind(this)
-  }
+  // constructor(props) {
+  //   super(props)
+  //   this.getCommitHash = this.getCommitHash.bind(this)
+  // }
 
   // componentDidMount() {
   //   if (this.props.selectedOne.challengeID) {

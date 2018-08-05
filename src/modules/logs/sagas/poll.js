@@ -120,10 +120,11 @@ export function* decodeLogsSaga(action) {
       console.log(decodedLogs.length, eventNames, 'logs:', decodedLogs)
       yield put(actions.decodeLogsSucceeded(lawgs))
     }
-    const currentBlock = yield call(ethjs.blockNumber)
 
     // notifications
+    // const currentBlock = yield call(ethjs.blockNumber)
     // if (lawgs.length === 1 && lawgs[0].txData.blockNumber.lt(currentBlock)) {
+
     if (lawgs.length < 3) {
       yield all(lawgs.map(lawg => notificationsSaga(lawg)))
     }

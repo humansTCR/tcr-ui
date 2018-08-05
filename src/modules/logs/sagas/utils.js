@@ -9,8 +9,6 @@ import includes from 'lodash/fp/includes'
 import isString from 'lodash/fp/isString'
 import isUndefined from 'lodash/fp/isUndefined'
 
-import { baseToConvertedUnit } from 'libs/units'
-
 export async function getBlockAndTxnFromLog(log, ethjs) {
   const block = await ethjs.getBlockByHash(log.blockHash, false)
   const tx = await ethjs.getTransactionByHash(log.transactionHash)
@@ -84,6 +82,7 @@ export function getNotificationTitleAndMessage(eventName, logData, tcr, listing)
     case '_TokensRescued':
       title = 'Tokens successfully rescued'
       message = 'View token transaction'
+      break
     case '_ChallengeSucceeded':
       title = 'Challenge against `title` succeeded'
       message = 'View challenge'

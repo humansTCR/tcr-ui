@@ -59,14 +59,7 @@ class TransactionsProvider extends Component {
   }
 
   render() {
-    const {
-      tcr,
-      children,
-      balances,
-      parameters,
-      sidePanelListing,
-      sidePanelMethod,
-    } = this.props
+    const { tcr, balances, parameters, sidePanelListing, sidePanelMethod } = this.props
 
     const needToApproveRegistry = BN(balances.registryAllowance).lt(
       BN(baseToConvertedUnit(parameters.minDeposit, tcr.tokenDecimals))
