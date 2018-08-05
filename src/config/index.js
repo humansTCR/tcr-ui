@@ -1,9 +1,9 @@
 // ipfs multihash to retrieve ABIs
-export const ipfsABIsHash = 'Qma3uaQ4RRSR1dR4vNj7CzFAHG5aY42tgBoW9HPWv89msT'
+export const ipfsABIsHash = 'QmciEP63apfMjqwx4Z2RYX8x4N4JdpTV2K5ipWwqSCx1fW'
 export const ipfsTokensHash = 'QmRH8e8ssnj1CWVepGvAdwaADKNkEpgDU5bffTbeS6JuG9'
 // hardcoded FORCED registry address
 export const hardcodedRegistryAddress = ''
-export const defaultRegistryAddress = '0x39cfbe27e99bafa761dac4566b4af3b4c9cc8fbe'
+export const defaultRegistryAddress = '0xafbbefb788e478d30f2aca7c8fc8b8271a9603a2'
 
 export function getIpfsABIsHash(network) {
   if (network === 'mainnet') {
@@ -27,22 +27,13 @@ export const registries = {
   ],
   rinkeby: [
     {
-      name: 'The Sunset Registry',
-      registryAddress: '0x3a1f892ab191e06a5769aa8bb9f1a95d06e30194',
-      votingAddress: '0x7235d99de42272160b90370e6a9e67c044d31ea5',
-      tokenAddress: '0xec717dbf0f1ec373c46197f88df796f118295bdd',
-      tokenSymbol: 'SUN',
-      tokenName: 'SunToken',
-      multihash: 'Qma3uaQ4RRSR1dR4vNj7CzFAHG5aY42tgBoW9HPWv89msT',
-    },
-    {
-      name: 'ethaireum',
-      registryAddress: '0x39cfbe27e99bafa761dac4566b4af3b4c9cc8fbe',
-      votingAddress: '0x946184cde118286d46825b866521d0236800c613',
-      tokenAddress: '0x73064ef6b8aa6d7a61da0eb45e53117718a3e891',
-      tokenSymbol: 'HAIR',
-      tokenName: 'ethair',
-      multihash: 'Qma3uaQ4RRSR1dR4vNj7CzFAHG5aY42tgBoW9HPWv89msT',
+      name: 'Humans',
+      registryAddress: '0xafbbefb788e478d30f2aca7c8fc8b8271a9603a2',
+      votingAddress: '0xa1b09c9f6523b7e3a6d57cacf07ab6357524c96e',
+      tokenAddress: '0x6709a93136ecfe3cff7615152cb423a202a8efb8',
+      tokenSymbol: 'HMN',
+      tokenName: 'Human',
+      multihash: 'QmciEP63apfMjqwx4Z2RYX8x4N4JdpTV2K5ipWwqSCx1fW',
     },
   ],
 }
