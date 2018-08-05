@@ -170,7 +170,6 @@ export async function updateListings(newListings, listings = fromJS({})) {
     if (
       val.hasIn(['logData', '_eventName']) ||
       !val.get('owner') ||
-      !val.get('listingID') ||
       !val.get('status') ||
       !val.get('listingHash')
     ) {
