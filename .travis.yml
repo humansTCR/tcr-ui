@@ -9,7 +9,7 @@ deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: humansregistry.com
+  bucket: "humansregistry.com"
   local_dir: build
   region: eu-central-1
   acl: public_read
