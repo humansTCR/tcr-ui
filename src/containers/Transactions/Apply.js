@@ -104,7 +104,13 @@ export default class Apply extends React.Component {
                   bgColor={colors.brightBlue}
                   wide
                   color={'white'}
-                  onClick={() => onSendTx('apply', this.state)}
+                  onClick={() =>
+                    onSendTx('apply', {
+                      listingID: this.state.listingID,
+                      data: this.state.data,
+                      numTokens: parameters.minDeposit,
+                    })
+                  }
                 >
                   {'SUBMIT APPLICATION'}
                 </Button>
