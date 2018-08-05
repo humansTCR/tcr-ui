@@ -41,7 +41,7 @@ class Landing extends Component {
         </p>
         <Link to="/registries">
           {' '}
-          <Button style={buttonStyle}>Proove your humanity ⟶</Button>
+          <Button style={buttonStyle}>Prove your humanity ⟶</Button>
         </Link>
         <p style={pStyle}>
           {' '}
