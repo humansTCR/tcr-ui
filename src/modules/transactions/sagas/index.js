@@ -79,7 +79,7 @@ function* sendTxStartSaga(action) {
       case 'apply': {
         // hash the string listingID
         const listingHash = yield call(getListingHash, listingID)
-        const args = [listingHash, convertedNumTokens, listingID, data]
+        const args = [listingHash, convertedNumTokens, data]
         yield call(sendTransactionSaga, registry, methodName, args)
         break
       }
@@ -200,6 +200,7 @@ export function* sendTransactionSaga(contract, method, args) {
       console.log('MetaMask tx denied')
       return false
     }
+    console.log(error.toString())
     yield put(actions.sendTransactionFailed({ error }))
   }
 }

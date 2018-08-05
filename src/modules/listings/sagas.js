@@ -5,8 +5,6 @@ import { selectAllListings } from './selectors'
 
 import * as actions from './actions'
 import { updateListings, createListing, updateAssortedListings } from './utils'
-import { delay } from 'redux-saga'
-
 export default function* rootListingsSaga() {
   yield takeEvery(logsTypes.DECODE_LOGS_SUCCEEDED, handleNewPollLogsSaga)
   yield fork(listenForApplications)
@@ -26,28 +24,28 @@ export function* listenForApplications() {
 
 // ipfs.infura rate limit: > 6 requests at a time
 // workaround: batch the candidates and concat results
-function* batchCreateListings(candidates, listings) {
-  const chunkCandidates = candidates.slice(0, 4)
-  console.log('chunkCandidates:', chunkCandidates)
-  console.log('listings:', listings)
+// function* batchCreateListings(candidates, listings) {
+//   const chunkCandidates = candidates.slice(0, 4)
+//   console.log('chunkCandidates:', chunkCandidates)
+//   console.log('listings:', listings)
 
-  if (chunkCandidates.length > 0) {
-    const chunkListings = yield all(
-      chunkCandidates.map(candidate =>
-        createListing(candidate.logData, candidate.txData, candidate.msgSender)
-      )
-    )
-    if (candidates.length > 4) {
-      yield call(delay, 400)
-    }
-    return yield call(
-      batchCreateListings,
-      candidates.slice(4),
-      listings.concat(chunkListings)
-    )
-  }
-  return listings
-}
+//   if (chunkCandidates.length > 0) {
+//     const chunkListings = yield all(
+//       chunkCandidates.map(candidate =>
+//         createListing(candidate.logData, candidate.txData, candidate.msgSender)
+//       )
+//     )
+//     if (candidates.length > 4) {
+//       yield call(delay, 400)
+//     }
+//     return yield call(
+//       batchCreateListings,
+//       candidates.slice(4),
+//       listings.concat(chunkListings)
+//     )
+//   }
+//   return listings
+// }
 
 // TODO: check for involved listings (Activities)
 // TODO: discard stale listings
